@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "7345a28a-a54a-4f50-b8fb-b7696533c542",
+		"name": "student",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43998392",
+		"_collection_link": "https://vishal-4202391.postman.co/workspace/vishal's-Workspace~22468531-0431-450d-8e66-b23e389d1316/collection/43998392-7345a28a-a54a-4f50-b8fb-b7696533c542?action=share&source=collection_link&creator=43998392"
+	},
+	"item": [
+		{
+			"name": "student list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students/list?limit=2&page=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"list"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/students/delete/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"delete",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"jems\",\r\n    \"lastName\": \"bond\",\r\n    \"email\": \"jems@gmail.com\",\r\n    \"class\": \"7th\",\r\n    \"birthDate\": \"1998-12-13\",\r\n    \"gender\": \"Male\",\r\n    \"marks\": [\r\n    { \"subject\": \"math\", \"mark\": 90 },\r\n     { \"subject\": \"english\", \"mark\": 70 },\r\n      { \"subject\": \"hindi\", \"mark\": 79 }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/students/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single student details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"kittu\",\r\n    \"lastName\": \"rajput\",\r\n    \"email\": \"abc@gmail.com\",\r\n    \"mark\": { \"subject\": \"math\", \"score\":\"23\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/students/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update student details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"jemiiii\",\r\n    \"lastName\": \"trisldfs\",\r\n    \"email\": \"john@gmail.com\",\r\n    \"class\": \"9th\",\r\n    \"birthDate\": \"1990-12-13\",\r\n    \"gender\": \"Male\",\r\n    \"marks\": [\r\n    { \"subject\": \"math\" },\r\n     { \"subject\": \"english\", \"mark\": 30 },\r\n      { \"subject\": \"hindi\", \"mark\": 79 }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/students/update/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students",
+						"update",
+						"13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
